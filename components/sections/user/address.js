@@ -6,6 +6,7 @@ import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
+import Title from "../../shared/others/title";
 
 const address = () => {
   const [addressType, setAddressType] = useState("");
@@ -13,7 +14,6 @@ const address = () => {
   const [district, setDistrict] = useState("");
   const [upazila, setUpazila] = useState("");
   const [union, setUnion] = useState("");
-
 
   const handleAddTypeChange = (event) => {
     setAddressType(event.target.value);
@@ -37,9 +37,11 @@ const address = () => {
 
   return (
     <>
-      <Typography variant="h6" gutterBottom>
-        ঠিকানা
-      </Typography>
+      <Title>
+        <Typography variant="h6">
+          ঠিকানা
+        </Typography>
+      </Title>
       <Grid container spacing={3}>
         <Grid item xs={12} md={3}>
           <FormControl fullWidth>
@@ -57,7 +59,7 @@ const address = () => {
           </FormControl>
         </Grid>
         <Grid item xs={12} md={3}>
-        <FormControl fullWidth>
+          <FormControl fullWidth>
             <InputLabel id="division">বিভাগ</InputLabel>
             <Select
               labelId="divisionLabel"
@@ -72,7 +74,7 @@ const address = () => {
           </FormControl>
         </Grid>
         <Grid item xs={12} md={3}>
-        <FormControl fullWidth>
+          <FormControl fullWidth>
             <InputLabel id="district">জেলা</InputLabel>
             <Select
               labelId="districtLabel"
@@ -87,7 +89,7 @@ const address = () => {
           </FormControl>
         </Grid>
         <Grid item xs={12} md={3}>
-        <FormControl fullWidth>
+          <FormControl fullWidth>
             <InputLabel id="upazila">উপজেলা</InputLabel>
             <Select
               labelId="upazilaLabel"
@@ -102,7 +104,7 @@ const address = () => {
           </FormControl>
         </Grid>
         <Grid item xs={12} md={3}>
-        <FormControl fullWidth>
+          <FormControl fullWidth>
             <InputLabel id="union">ইউনিয়ন</InputLabel>
             <Select
               labelId="unionLabel"

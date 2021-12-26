@@ -1,6 +1,7 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import Title from "../../shared/others/title";
 
 const basic = [
   "নাম",
@@ -15,14 +16,14 @@ const basic = [
   "ধর্ম",
 ];
 const addresses = [
-        "ঠিকানার ধরন", 
-        "বিভাগ", 
-        "জেলা", 
-        "উপজেলা", 
-        "ইউনিয়ন",
-        "পোস্ট অফিসের নাম্বার",
-        "গ্রাম"
-      ];
+  "ঠিকানার ধরন",
+  "বিভাগ",
+  "জেলা",
+  "উপজেলা",
+  "ইউনিয়ন",
+  "পোস্ট অফিসের নাম্বার",
+  "গ্রাম",
+];
 const payments = [
   { name: "Card type", detail: "Visa" },
   { name: "Card holder", detail: "Mr John Smith" },
@@ -67,9 +68,11 @@ const userInfo = [
 const review = () => {
   return (
     <>
-      <Typography variant="h6" gutterBottom>
-        পুনঃমূল্যায়ন
-      </Typography>
+      <Title>
+        <Typography variant="h6">
+          পুনঃমূল্যায়ন
+        </Typography>
+      </Title>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
@@ -77,16 +80,16 @@ const review = () => {
           </Typography>
           <Grid container>
             <Grid item xs={6}>
-              {basic.map((item,index,array) => (
-                  <Typography gutterBottom key={index}>{item}</Typography>
+              {basic.map((item, index, array) => (
+                <Typography gutterBottom key={index}>
+                  {item}
+                </Typography>
               ))}
             </Grid>
             <Grid item xs={6}>
-                
-              {userInfo.map((item,index,array) => (
-                  <Typography gutterBottom key={index}></Typography>
+              {userInfo.map((item, index, array) => (
+                <Typography gutterBottom key={index}></Typography>
               ))}
-
             </Grid>
           </Grid>
         </Grid>
@@ -96,16 +99,16 @@ const review = () => {
           </Typography>
           <Grid container>
             <Grid item xs={6}>
-              {addresses.map((item,index,array) => (
-                  <Typography gutterBottom key={index}>{item}</Typography>
+              {addresses.map((item, index, array) => (
+                <Typography gutterBottom key={index}>
+                  {item}
+                </Typography>
               ))}
             </Grid>
             <Grid item xs={6}>
-                
-              {userInfo.map((item,index,array) => (
-                  <Typography gutterBottom key={index}></Typography>
+              {userInfo.map((item, index, array) => (
+                <Typography gutterBottom key={index}></Typography>
               ))}
-
             </Grid>
           </Grid>
         </Grid>
