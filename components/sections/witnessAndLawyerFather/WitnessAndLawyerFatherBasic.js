@@ -52,12 +52,21 @@ const WitnessAndLawyerFatherBasic = (props) => {
           />
         </Grid>
       </Grid>
-      <div style={{ marginTop: "2%" }}>
-        <Address title={"witnessAndLawyerFather"}></Address>
-      </div>
-      <div style={{ marginTop: "2%" }}>
-        <Address title={"witnessAndLawyerFather"}></Address>
-      </div>
+
+      <Grid
+        container
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      >
+        <Grid sm={6} md={6} xs={12} spacing={2}>
+          <Address title={"thikana"}></Address>
+        </Grid>
+        <Grid sm={6} md={5.5} xs={12} spacing={2}>
+          <Address title={"thikana"}></Address>
+        </Grid>
+      </Grid>
       <div style={{ marginTop: "4%" }}>
         <Title>
           <Typography variant="h6">সাক্ষীর তথ্য</Typography>
