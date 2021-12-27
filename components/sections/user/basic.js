@@ -23,10 +23,10 @@ const basic = (props) => {
   return (
     <>
       <Title>
-        <Typography variant="h6">মৌলিক তথ্য</Typography>
+        <Typography variant="h6">{props.title}</Typography>
       </Title>
 
-      <Grid container spacing={3} sx={{marginTop:1}}>
+      <Grid container spacing={3}>
         <Grid item xs={12} sm={4}>
           <TextField
             required

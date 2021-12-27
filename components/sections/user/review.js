@@ -65,12 +65,12 @@ const userInfo = [
   },
 ];
 
-const review = () => {
+const review = (props) => {
   return (
     <>
       <Title>
         <Typography variant="h6">
-          পুনঃমূল্যায়ন
+          {props.title}
         </Typography>
       </Title>
       <Grid container spacing={2}>

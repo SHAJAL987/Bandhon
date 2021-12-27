@@ -37,14 +37,10 @@ const address = (props) => {
 
   return (
     <>
-      {props.type === "user" && (
-        <>
-          <Title>
-            <Typography variant="h6">ঠিকানা</Typography>
-          </Title>
-        </>
-      )}
-      <Grid container spacing={3} sx={{marginTop:1}}>
+      <Title>
+        <Typography variant="h6">{props.title}</Typography>
+      </Title>
+      <Grid container spacing={3}>
         <Grid item xs={12} md={4}>
           <FormControl fullWidth size="small">
             <InputLabel id="addressType-select-label">ঠিকানার ধরন</InputLabel>
