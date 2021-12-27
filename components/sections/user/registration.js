@@ -40,11 +40,11 @@ const steps = ["মৌলিক তথ্য", "ঠিকানা", "পুন�
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <Basic type={'user'}/>;
+      return <Basic type={'user'} title={'মৌলিক তথ্য'}/>;
     case 1:
-      return <Address type={'user'}/>;
+      return <Address type={'user'} title={'ঠিকানা'}/>;
     case 2:
-      return <Review />;
+      return <Review title={'পুনঃমূল্যায়ন'}/>;
     default:
       throw new Error("Unknown step");
   }

@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 import Title from "../../shared/others/Title";
 
-const address = (props) => {
+const address2 = (props) => {
   const [addressType, setAddressType] = useState("");
   const [division, setDivision] = useState("");
   const [district, setDistrict] = useState("");
@@ -41,7 +41,7 @@ const address = (props) => {
         <Typography variant="h6">{props.title}</Typography>
       </Title>
       <Grid container spacing={3}>
-        {/* <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4}>
           <FormControl fullWidth size="small">
             <InputLabel id="addressType-select-label">ঠিকানার ধরন</InputLabel>
             <Select
@@ -56,7 +56,7 @@ const address = (props) => {
               <MenuItem value={20}>স্থায়ী ঠিকানা</MenuItem>
             </Select>
           </FormControl>
-        </Grid> */}
+        </Grid>
         <Grid item xs={12} md={4}>
           <FormControl fullWidth size="small">
             <InputLabel id="division">বিভাগ</InputLabel>
@@ -159,4 +159,4 @@ const address = (props) => {
   );
 };
 
-export default address;
+export default address2;
