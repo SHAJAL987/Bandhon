@@ -40,9 +40,9 @@ const steps = ["মৌলিক তথ্য", "ঠিকানা", "পুন�
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <Basic type={'bride'}/>;
+      return <Basic type={'user'}/>;
     case 1:
-      return <Address />;
+      return <Address type={'user'}/>;
     case 2:
       return <Review />;
     default:

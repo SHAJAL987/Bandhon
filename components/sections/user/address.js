@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 import Title from "../../shared/others/title";
 
-const address = () => {
+const address = (props) => {
   const [addressType, setAddressType] = useState("");
   const [division, setDivision] = useState("");
   const [district, setDistrict] = useState("");
@@ -37,14 +37,16 @@ const address = () => {
 
   return (
     <>
-      <Title>
-        <Typography variant="h6">
-          ঠিকানা
-        </Typography>
-      </Title>
-      <Grid container spacing={3}>
-        <Grid item xs={12} md={3}>
-          <FormControl fullWidth>
+      {props.type === "user" && (
+        <>
+          <Title>
+            <Typography variant="h6">ঠিকানা</Typography>
+          </Title>
+        </>
+      )}
+      <Grid container spacing={3} sx={{marginTop:1}}>
+        <Grid item xs={12} md={4}>
+          <FormControl fullWidth size="small">
             <InputLabel id="addressType-select-label">ঠিকানার ধরন</InputLabel>
             <Select
               labelId="addressTypeLabel"
@@ -58,8 +60,8 @@ const address = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} md={3}>
-          <FormControl fullWidth>
+        <Grid item xs={12} md={4}>
+          <FormControl fullWidth size="small">
             <InputLabel id="division">বিভাগ</InputLabel>
             <Select
               labelId="divisionLabel"
@@ -73,8 +75,8 @@ const address = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} md={3}>
-          <FormControl fullWidth>
+        <Grid item xs={12} md={4}>
+          <FormControl fullWidth size="small">
             <InputLabel id="district">জেলা</InputLabel>
             <Select
               labelId="districtLabel"
@@ -88,8 +90,8 @@ const address = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} md={3}>
-          <FormControl fullWidth>
+        <Grid item xs={12} md={4}>
+          <FormControl fullWidth size="small">
             <InputLabel id="upazila">উপজেলা</InputLabel>
             <Select
               labelId="upazilaLabel"
@@ -103,8 +105,8 @@ const address = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} md={3}>
-          <FormControl fullWidth>
+        <Grid item xs={12} md={4}>
+          <FormControl fullWidth size="small">
             <InputLabel id="union">ইউনিয়ন</InputLabel>
             <Select
               labelId="unionLabel"
@@ -120,7 +122,7 @@ const address = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={4}>
           <TextField
             required
             id="postalCode"
@@ -128,10 +130,11 @@ const address = () => {
             type="number"
             label="পোস্ট অফিসের নাম্বার"
             fullWidth
+            size="small"
             variant="outlined"
           />
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={4}>
           <TextField
             required
             id="village"
@@ -139,6 +142,7 @@ const address = () => {
             type="text"
             label="গ্রাম"
             fullWidth
+            size="small"
             variant="outlined"
           />
         </Grid>
