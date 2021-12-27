@@ -10,7 +10,7 @@ import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import Title from "../../shared/others/title";
+import Title from "../../shared/others/Title";
 
 const basic = (props) => {
   const [religion, setReligion] = React.useState("");
@@ -22,9 +22,7 @@ const basic = (props) => {
   return (
     <>
       <Title>
-        <Typography variant="h6">
-          মৌলিক তথ্য
-        </Typography>
+        <Typography variant="h6">মৌলিক তথ্য</Typography>
       </Title>
 
       <Grid container spacing={3}>

@@ -6,9 +6,9 @@ import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
-import Title from "../../shared/others/title";
+import Title from "../../shared/others/Title";
 
-const address = () => {
+const address = (props) => {
   const [addressType, setAddressType] = useState("");
   const [division, setDivision] = useState("");
   const [district, setDistrict] = useState("");
@@ -37,11 +37,11 @@ const address = () => {
 
   return (
     <>
-      <Title>
-        <Typography variant="h6">
-          ঠিকানা
-        </Typography>
-      </Title>
+      {props.title !== "witnessAndLawyerFather" && (
+        <Title>
+          <Typography variant="h6">ঠিকানা</Typography>
+        </Title>
+      )}
       <Grid container spacing={3}>
         <Grid item xs={12} md={3}>
           <FormControl fullWidth>
@@ -52,6 +52,7 @@ const address = () => {
               value={addressType}
               label="address"
               onChange={handleAddTypeChange}
+              size="small"
             >
               <MenuItem value={10}>বর্তমান ঠিকানা</MenuItem>
               <MenuItem value={20}>স্থায়ী ঠিকানা</MenuItem>
@@ -67,6 +68,7 @@ const address = () => {
               value={division}
               label="division"
               onChange={handleDivisionChange}
+              size="small"
             >
               <MenuItem value={10}>ঢাকা</MenuItem>
               <MenuItem value={20}>চট্টগ্রাম</MenuItem>
@@ -82,6 +84,7 @@ const address = () => {
               value={district}
               label="district"
               onChange={handleDistrictChange}
+              size="small"
             >
               <MenuItem value={10}>কুমিল্লা</MenuItem>
               <MenuItem value={20}>নোয়াখালী</MenuItem>
@@ -97,6 +100,7 @@ const address = () => {
               value={upazila}
               label="upazila"
               onChange={handleUpazilaChange}
+              size="small"
             >
               <MenuItem value={10}>বরুড়া</MenuItem>
               <MenuItem value={20}>ব্রাহ্মণপাড়া</MenuItem>
@@ -112,6 +116,7 @@ const address = () => {
               value={union}
               label="union"
               onChange={handleUnionChange}
+              size="small"
             >
               <MenuItem value={10}>আড্ডা</MenuItem>
               <MenuItem value={20}>আদ্রা</MenuItem>
@@ -129,6 +134,7 @@ const address = () => {
             label="পোস্ট অফিসের নাম্বার"
             fullWidth
             variant="outlined"
+            size="small"
           />
         </Grid>
         <Grid item xs={12} sm={3}>
@@ -139,6 +145,7 @@ const address = () => {
             type="text"
             label="গ্রাম"
             fullWidth
+            size="small"
             variant="outlined"
           />
         </Grid>

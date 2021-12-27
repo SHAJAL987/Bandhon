@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import Title from "../../shared/others/title";
+import Title from "../../shared/others/Title";
 
 const basic = [
   "নাম",
@@ -69,9 +69,7 @@ const review = () => {
   return (
     <>
       <Title>
-        <Typography variant="h6">
-          পুনঃমূল্যায়ন
-        </Typography>
+        <Typography variant="h6">পুনঃমূল্যায়ন</Typography>
       </Title>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
