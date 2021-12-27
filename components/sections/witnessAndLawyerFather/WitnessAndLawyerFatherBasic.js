@@ -3,6 +3,7 @@ import React from "react";
 import Title from "../../shared/others/Title";
 import Address from "../user/address";
 import WitnessForm from "./WitnessForm";
+import Stack from "@mui/material/Stack";
 //
 
 import TextField from "@mui/material/TextField";
@@ -42,16 +43,19 @@ const WitnessAndLawyerFatherBasic = (props) => {
           />
         </Grid>
         <Grid item xs={12} sm={4} md={4}>
-          <TextField
-            required
-            id="dob"
-            name="dob"
-            label="জন্ম তারিখ"
-            fullWidth
-            size="small"
-            autoComplete="given-name"
-            variant="outlined"
-          />
+          <Stack>
+            <TextField
+              id="date"
+              label="জন্ম তারিখ"
+              fullWidth
+              size="small"
+              type="date"
+              defaultValue="2021-12-27"
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </Stack>
         </Grid>
         <Grid
           container
