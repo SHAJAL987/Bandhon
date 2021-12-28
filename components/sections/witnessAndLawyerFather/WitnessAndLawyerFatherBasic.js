@@ -57,19 +57,19 @@ const WitnessAndLawyerFatherBasic = (props) => {
             />
           </Stack>
         </Grid>
-        <Grid
-          container
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-          }}
-        >
-          <Grid sm={6} md={5.5} xs={12} spacing={2} style={{ marginTop: "2%" }}>
-            <Address title={"বর্তমান ঠিকানা"}></Address>
-          </Grid>
-          <Grid sm={6} md={5.5} xs={12} spacing={2} style={{ marginTop: "2%" }}>
-            <Address title={"স্থায়ী ঠিকানা"}></Address>
-          </Grid>
+      </Grid>
+      <Grid
+        container
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <Grid sm={6} md={5.8} xs={12} spacing={2} style={{ marginTop: "2%" }}>
+          <Address title={"বর্তমান ঠিকানা"}></Address>
+        </Grid>
+        <Grid sm={6} md={5.8} xs={12} spacing={2} style={{ marginTop: "2%" }}>
+          <Address title={"স্থায়ী ঠিকানা"}></Address>
         </Grid>
       </Grid>
 

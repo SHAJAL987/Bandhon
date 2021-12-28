@@ -66,7 +66,7 @@ const WitnessForm = () => {
       {inputList.map((x, i) => {
         return (
           <>
-            <div style={{ margin: "2% 2%" }}>
+            <div style={{ marginTop: "2%" }}>
               <Grid container spacing={3}>
                 <Grid item xs={12} sm={3} md={3}>
                   <TextField
@@ -128,7 +128,7 @@ const WitnessForm = () => {
               >
                 {inputList.length !== 1 && (
                   <Button
-                    style={{ marginRight: "1%" }}
+                    style={{ marginRight: "1%", backgroundColor: "lightblue" }}
                     variant="contained"
                     onClick={() => handleRemoveClick(i)}
                   >
@@ -136,7 +136,11 @@ const WitnessForm = () => {
                   </Button>
                 )}
                 {inputList.length - 1 === i && (
-                  <Button variant="contained" onClick={handleAddClick}>
+                  <Button
+                    style={{ backgroundColor: "lightblue" }}
+                    variant="contained"
+                    onClick={handleAddClick}
+                  >
                     Add
                   </Button>
                 )}

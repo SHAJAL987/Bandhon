@@ -14,3 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+.MuiCardContent-root.css-46bh2p-MuiCardContent-root {
+  margin-top: 10px;
+  margin-bottom: 8%;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation3.css-1w9rpj9-MuiPaper-root {
+  margin-top: 8%;
+}
