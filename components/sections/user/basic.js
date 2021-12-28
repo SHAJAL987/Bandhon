@@ -10,8 +10,9 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import Title from "../../shared/others/Title";
 import { useState } from "react";
-import Title from "../../shared/others/title";
+// import Title from "../../shared/others/title";
 
 const basic = (props) => {
   const [religion, setReligion] = useState("");

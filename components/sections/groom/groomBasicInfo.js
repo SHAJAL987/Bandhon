@@ -10,7 +10,7 @@ import AddressDetails from "../user/addressDetails";
 import Basic from "../user/basic";
 import WitnessForm from "../witnessAndLawyerFather/WitnessForm";
 
-const BrideBasicInfo = () => {
+const GroomBasicInfo = () => {
   return (
     <>
       <Grid
@@ -46,12 +46,12 @@ const BrideBasicInfo = () => {
         <Grid sm={2} md={2.5} xs={12} sx={{ textAlign: "center" }}>
           <Grid sm={12} md={12} xs={12}>
             <Title>
-              <Typography variant="h6">কনের ছবি</Typography>
+              <Typography variant="h6">বরের ছবি</Typography>
             </Title>
             <ImageTemplate
               component="img"
               height="160"
-              image="/brd.png"
+              image="/groom.png"
               alt="bridePic"
             />
           </Grid>
@@ -83,4 +83,4 @@ const BrideBasicInfo = () => {
   );
 };
 
-export default BrideBasicInfo;
+export default GroomBasicInfo;
