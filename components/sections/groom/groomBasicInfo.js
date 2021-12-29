@@ -8,7 +8,6 @@ import Title from "../../shared/others/title";
 import Address from "../user/address";
 import AddressDetails from "../user/addressDetails";
 import Basic from "../user/basic";
-import WitnessForm from "../witnessAndLawyerFather/WitnessForm";
 
 const GroomBasicInfo = () => {
   return (
@@ -36,12 +35,12 @@ const GroomBasicInfo = () => {
           <Grid sm={12} md={12} sx={{ marginTop: 3 }}>
             <AddressDetails title="ঠিকানা পুনঃমূল্যায়ন"/>
           </Grid>
-          <Grid sm={12} md={12} sx={{ marginTop: 3 }}>
+          {/* <Grid sm={12} md={12} sx={{ marginTop: 3 }}>
             <Title>
               <Typography variant="h6">সাক্ষী</Typography>
             </Title>
             <WitnessForm/>
-          </Grid>
+          </Grid> */}
         </Grid>
         <Grid sm={2} md={2.5} xs={12} sx={{ textAlign: "center" }}>
           <Grid sm={12} md={12} xs={12}>

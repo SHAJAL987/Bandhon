@@ -1,4 +1,8 @@
+import AddIcon from "@mui/icons-material/Add";
+import DeleteIcon from "@mui/icons-material/Delete";
+import SaveAsIcon from "@mui/icons-material/SaveAs";
 import ThumbsUpDownIcon from "@mui/icons-material/ThumbsUpDown";
+import { Grid } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -12,6 +16,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import Address from "./address";
+import AddressDetails from "./addressDetails";
 import Basic from "./basic";
 import Review from "./review";
 
@@ -34,17 +39,53 @@ function Copyright(props) {
   );
 }
 
+const AddressFnc = () => {
+  return (
+    <>
+      <Address type={"user"} title={"ঠিকানা"} />
+      <Button
+        startIcon={<AddIcon />}
+        sx={{ marginTop: 1, marginLeft: 1 }}
+        variant="outlined"
+        size="small"
+      >
+        Add
+      </Button>
+      <Button
+        startIcon={<SaveAsIcon />}
+        sx={{ marginTop: 1, marginLeft: 1 }}
+        variant="outlined"
+        size="small"
+      >
+        Update
+      </Button>
+      <Button
+        startIcon={<DeleteIcon />}
+        sx={{ marginTop: 1, marginLeft: 1 }}
+        variant="outlined"
+        size="small"
+        color="error"
+      >
+        Delete
+      </Button>
+      <Grid sm={12} md={12} sx={{ marginTop: 3 }}>
+            <AddressDetails title="ঠিকানা পুনঃমূল্যায়ন"/>
+      </Grid>
+    </>
+  );
+};
+
 // ------------ Stepper Steps -------------
 const steps = ["মৌলিক তথ্য", "ঠিকানা", "পুনঃমূল্যায়ন"];
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <Basic type={'user'} title={'মৌলিক তথ্য'}/>;
+      return <Basic type={"user"} title={"মৌলিক তথ্য"} />;
     case 1:
-      return <Address type={'user'} title={'ঠিকানা'}/>;
+      return <AddressFnc />;
     case 2:
-      return <Review title={'পুনঃমূল্যায়ন'}/>;
+      return <Review title={"পুনঃমূল্যায়ন"} />;
     default:
       throw new Error("Unknown step");
   }
@@ -83,7 +124,6 @@ const MainSteps = () => {
     </>
   );
 };
-
 
 const theme = createTheme();
 
